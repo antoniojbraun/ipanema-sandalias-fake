@@ -2,7 +2,7 @@ let table = new DataTable("#myTable");
 
 let slider = document.getElementById("slider");
 let img = document.createElement("img");
-img.src = "../img/img-2.avif";
+img.src = "img/img-2.avif";
 img.classList.add("slide");
 slider.append(img);
 
@@ -29,7 +29,7 @@ const nextSlide = () => {
 };
 
 const trocaSlide = (numero) => {
-  img.src = `../img/img-${numero}.avif`;
+  img.src = `img/img-${numero}.avif`;
   img.classList.add("slide");
 };
 
