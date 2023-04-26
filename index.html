@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,10 @@
     <title>Sandália Ipanema</title>
     <link rel="stylesheet" href="css/estilos.css">
     <script src="https://kit.fontawesome.com/8f18dfd5e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+
 </head>
+
 <body>
     <header>
         <div class="header-2">
@@ -32,10 +36,10 @@
                 <a href="">
                     Sustentabilidade
                 </a>
-            </div>     
+            </div>
             <div class="icons">
 
-            </div>      
+            </div>
         </div>
     </header>
     <section class="container-breadcrumb">
@@ -47,14 +51,16 @@
                     </a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-chevron-right" style="color: #a1a1a1;"></i>                </li>
+                    <i class="fa-solid fa-chevron-right" style="color: #a1a1a1;"></i>
+                </li>
                 <li>
                     <a href="#">
                         Sandálias
                     </a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-chevron-right" style="color: #a1a1a1;"></i>                </li>
+                    <i class="fa-solid fa-chevron-right" style="color: #a1a1a1;"></i>
+                </li>
                 <li>
                     <span>
                         Sandália de Dedo Barbie Fun
@@ -67,13 +73,28 @@
         <div class="container-row">
             <div class="container-product-images">
                 <div class="product-thumb">
-                    <img src="img/img-1.avif" alt="">
-                    <img src="img/img-2.avif" alt="">
-                    <img src="img/img-3.avif" alt="">
-                    <img src="img/img-4.avif" alt="">
+                    <img src="img/img-1.avif" alt="" onclick="trocaSlide(1)">
+                    <img src="img/img-2.avif" alt="" onclick="trocaSlide(2)">
+                    <img src="img/img-3.avif" alt="" onclick="trocaSlide(3)">
+                    <img src="img/img-4.avif" alt="" onclick="trocaSlide(4)">
                 </div>
                 <div class="product-main-image">
-                    <img src="img/img-2.avif" alt="">
+                    <div class="slider" id="slider">
+                    </div>
+                    <div class="divSliderNav">
+                        <div class="divArrowLeft" onclick="prevSlide()">
+                            <i class="arrow left"></i>
+                        </div>
+                        <div class="divArrowRight" onclick="nextSlide()">
+                            <i class="arrow right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+
+                    <button id="nextSlide" >Proximo</button>
+                    <button id="prevSlide" >Anterior</button>
                 </div>
             </div>
             <div class="container-product-details">
@@ -117,7 +138,9 @@
                 <div class="product-description">
                     <p id="product-description-title">Descrição</p>
                     <p id="product-description-text">
-                        O Barbiecore em um novo nível! A Ipanema Barbie Fun é perfeita para os adultos apaixonados pela icônica boneca, trazendo muito conforto e leveza, clássicos da Ipanema, para esse modelo que já é hit.
+                        O Barbiecore em um novo nível! A Ipanema Barbie Fun é perfeita para os adultos apaixonados pela
+                        icônica boneca, trazendo muito conforto e leveza, clássicos da Ipanema, para esse modelo que já
+                        é hit.
                     </p>
                 </div>
                 <p class="product-size-guide">
@@ -125,15 +148,110 @@
                 </p>
             </div>
         </div>
+        <div class="tabelaTamanhos">
+            <h2>Tabela de tamanhos</h2>
+            <table id="myTable" class="display" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Brasil</th>
+                        <th>EUA</th>
+                        <th>UE</th>
+                        <th>Comprimento</th>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td>33</td>
+                        <td>4</td>
+                        <td>35</td>
+                        <td>21cm</td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>5</td>
+                        <td>36</td>
+                        <td>22cm</td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>6</td>
+                        <td>37</td>
+                        <td>23cm</td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>7</td>
+                        <td>38</td>
+                        <td>24cm</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>8</td>
+                        <td>39</td>
+                        <td>25cm</td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>9</td>
+                        <td>40</td>
+                        <td>26cm</td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td>10</td>
+                        <td>41</td>
+                        <td>27dm</td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>11</td>
+                        <td>42</td>
+                        <td>28cm</td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>12</td>
+                        <td>43</td>
+                        <td>29cm</td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>13</td>
+                        <td>44</td>
+                        <td>30cm</td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td>14</td>
+                        <td>45</td>
+                        <td>31cm</td>
+                    </tr>
+                    <tr>
+                        <td>44</td>
+                        <td>15</td>
+                        <td>46</td>
+                        <td>32cm</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Brasil</th>
+                        <th>EUA</th>
+                        <th>UE</th>
+                        <th>Compromento</th>
+                    </tr>
+                </tfoot>
+                </thead>
+            </table>
+        </div>
         <div class="sustentabilidade">
             <img src="img/b2c_ipanema_sustetabilidade_slim_d_altc-1104.webp" alt="Sustentabilidade">
         </div>
     </main>
-    <section>
-
-    </section>
     <footer>
-
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="http://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="/js/script.js"></script>
 </body>
+
 </html>
